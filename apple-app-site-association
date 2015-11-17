@@ -3,7 +3,7 @@
         "apps": [],
         "details": [
             {
-                "appID": "9SV9LPRC42.im.zom.messenger"
+                "appID": "9SV9LPRC42.im.zom.messenger",
                 "paths": [ "/i/*" ]
             }
         ]
