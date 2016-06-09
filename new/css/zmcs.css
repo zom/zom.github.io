@@ -1,0 +1,329 @@
+@charset "UTF-8";
+.top-bar{
+ background-color:#fff;
+ border-bottom:solid 6px #e7275a;
+ margin-bottom:8px;
+}
+.contfeat {
+color:#e7275a;
+font-weight:bold;
+}
+.top-bar, .top-bar ul {
+background-color:#fff;
+color:#e7275a;
+}
+.top-bar .logo {
+ margin-left:40px;
+ margin-bottom:10px;
+}
+.menu li.feature a {
+color:#e7275a;
+border:solid 2px #e7275a;
+border-radius: 5px;
+}
+.menu li a {
+color:#999;
+font-weight:bold;
+}
+.menu li a:hover {
+color:#9e133e;
+
+}
+.b3 a:link, .b3 a:visited {
+	color: #D92453;
+	text-decoration: none;
+	font-weight: bold;
+}
+.row {
+padding: 10px 40px 10px 40px;
+}
+.back-top {
+background: #e2255b; /* Old browsers */
+background: -moz-linear-gradient(top,  #e2255b 0%, #ae1f4d 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #e2255b 0%,#ae1f4d 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #e2255b 0%,#ae1f4d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2255b', endColorstr='#ae1f4d',GradientType=0 ); /* IE6-9 */
+}
+.top-bar-right {
+   
+    margin-right: 70px !important;
+}
+.dropdown.menu .has-submenu.is-right-arrow>a::after {
+    
+    border-color: transparent transparent transparent #e7275a;
+    border-left-style: solid;
+}
+.downb1{
+	background-color:#e7275a;
+	
+	padding: 80px 0px 80px 0px;
+	text-align:center;
+	background-image: url(../images/downb.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.b1{
+ background-color:#e7275a;	
+ min-height:340px;
+ padding: 50px 0px 50px 0px;
+ 
+}
+.b2{
+ background-color:#efefef;	
+ min-height:340px;
+ padding: 50px 0px 50px 0px;
+ 
+}
+.b3{
+ background-color:#000;
+ color:#fff;
+ padding: 50px 0px 50px 0px;	
+}
+.b4 {
+ background-color:#FFF;
+ min-height:340px;
+ padding: 50px 0px 50px 0px;
+ 
+}
+.b1 h2 {
+color:#ffa9cc !important;
+}
+.downb1 h2 {
+color:#fff !important;
+}
+.downb1 p {
+color:#ffa9cc !important;
+}
+.centered {
+text-align:center;
+}
+.bein{
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:bold;
+	color:#FFF;
+	font-size:65px;
+	line-height:55px;
+	margin-left:135px;
+	margin-top:90px;
+	text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);
+	 -moz-animation-duration: 2s;
+  -moz-animation-delay: 0s;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  
+}
+.apk{
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:bold;
+	color:#FFF;
+	font-size:40px;
+	line-height:50px;
+	
+	margin-top:90px;
+	text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);
+	 -moz-animation-duration: 2s;
+  -moz-animation-delay: 0s;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  
+}
+.invited{
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:bold;
+	color:#FFF;
+	font-size:50px;
+	line-height:50px;
+	
+	margin-top:90px;
+	text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);
+	 -moz-animation-duration: 2s;
+  -moz-animation-delay: 0s;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  
+}
+.thezom{
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:bold;
+    color:#FFF;
+	font-size:205px;
+	line-height:65px;
+	margin-bottom:70px;
+	text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);
+	 -moz-animation-duration: 2s;
+  -moz-animation-delay: 1s;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  
+}
+.download {
+ color:#fff; 
+ font-weight:bold;
+ border-radius:8px; 
+ border: solid 3px #fff;
+ padding:10px;
+ text-align:center;
+ text-transform:uppercase;
+ width:50%;
+ margin:auto;
+ margin-bottom:20px;
+ -moz-animation-duration: 1s;
+  -moz-animation-delay: 2s;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+.download a{
+ color:#fff;
+ text-decoration:none;
+}
+h2 {
+color:#e7275a;
+font-weight:bold;
+}
+.pnk {
+color:#e7275a;
+font-weight:bold;
+}
+.gry {
+color:#999;
+font-weight:bold;
+}
+.white {
+color:#fff;
+font-weight:bold;
+-moz-animation-duration: 1s;
+  -moz-animation-delay: 2s;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+.white2 {
+color:#fff;
+font-weight:bold;
+-moz-animation-duration: 1s;
+  -moz-animation-delay: 1s;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+h2 {
+ position: relative;
+    margin-top: 20px;
+}
+
+.fet1 {
+	margin-top: 80;
+text-align:center; 
+}
+.fet1:before {
+content: "";
+    display: block;
+    border-top: solid 3px #CCC;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+h2.fet1 span {
+    background: #fff;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+  }
+.cont-cel {
+position:relative;
+}
+.cel {
+position:absolute; 
+top:-70px;
+left:10px;
+}
+.accordion-title {
+color:#e7275a;
+font-weight:bold;
+font-size:16px;
+}
+.accordion-title:focus, .accordion-title:hover  {
+color:#9e133e;
+}
+.bottomchar {
+ position:absolute; 
+ top:-150px; 
+ right:0px;
+}
+.hidden{
+     opacity:0;
+}
+.visible{
+     opacity:1;
+}
+.btn-style{
+	border : solid 0px #000000;
+	border-radius : 5px;
+	moz-border-radius : 5px;
+	font-size : 19px;
+	color : #ffffff;
+	padding : 5px 20px;
+	background : #d92454;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d92454), color-stop(100%,#ab0f39));
+	background : -moz-linear-gradient(top, #d92454 0%, #ab0f39 100%);
+	background : -webkit-linear-gradient(top, #d92454 0%, #ab0f39 100%);
+	background : -o-linear-gradient(top, #d92454 0%, #ab0f39 100%);
+	background : -ms-linear-gradient(top, #d92454 0%, #ab0f39 100%);
+	background : linear-gradient(top, #d92454 0%, #ab0f39 100%);
+	filter : progid:DXImageTransform.Microsoft.gradient( startColorstr='#d92454', endColorstr='#ab0f39',GradientType=0 );
+
+}
+
+@media (max-width:900px){
+	h2 {
+    font-size:30px !important;
+  }
+.bein{
+	
+	font-size:65px!important;
+	line-height:35px;
+	margin-left:105px;
+	margin-top:50px ;
+	  
+}
+.thezom{
+	
+	font-size:160px!important;
+	line-height:55px;
+	margin-bottom:70px;
+	
+  
+}	
+.cel {
+position:relative; 
+top:0px;
+left:10px;
+}
+	}
+
+@media (max-width:500px){
+h2 {
+    font-size:30px !important;
+  }
+  
+.bein{
+	
+	font-size:41px!important;
+	line-height:35px;
+	margin-left:105px;
+	margin-top:50px ;
+	  
+}
+.thezom{
+	
+	font-size:150px!important;
+	line-height:55px;
+	margin-bottom:70px;
+}	
+
+.cel {
+position:relative; 
+top:0px;
+left:10px;
+}
+	}

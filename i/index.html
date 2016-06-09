@@ -37,6 +37,7 @@
     <!-- Modernizr Scripts -->
     <script src="javascript/vendor/modernizr-2.7.1.min.js"></script>
     <script src="javascript/wechat.js"></script>
+    <script src="javascript/qrcode/qrcode.js"></script>
   </head>
   <body class="index" id="to-top">
 
@@ -61,7 +62,7 @@
 		<b>1) Download the app below.<br/>
 		2) Once you have setup Zom,<br/>tap on the invite link again<br/>to add your friend.</b>	
 <p class="btn-app-store">
-		 <a class="btn btn-lg" href="#section-download">
+		 <a class="btn btn-lg" href="../index.html">
                 <img src="images/Download_App.png" alt="">
               </a>
             </p> <!-- /.btn-app-store -->
@@ -78,78 +79,6 @@
     </header> <!-- /.jumbotron -->
 
     <section class="services-section" id="section-download" style="padding:30px">
-		
-		<img src="images/downloadheader.png" style="width:50%"/>
-<p class="btn-app-store">
-              <a class="btn btn-lg" href="https://play.google.com/store/apps/details?id=im.zom.messenger">
-                <img src="images/Download_Android_hover.png" alt="" style="width:200px">
-              </a>
-              <a class="btn btn-lg" href="#section-3">
-                <img src="images/Download_IOS_hover.png" alt="" style="width:200px">
-		</a>
-</p>
-
-
-</div>
-</section>
-
-
-
-    <!-- Services -->
-    <section class="jumbotron" id="section-1">
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-md-4 col-services">
-            
-            <!-- Icons -->
-            <figure>
-              <img class="img-services img-margin" src="images/stickers_icon.png" alt="">
-            </figure>
-
-            <!-- Title -->
-            <h3 style="color:white;">Totally Free</h3>
-
-            <!-- Description -->
-		<p>No costs, no limits, and works had to keep you connected!</p>
-
-          </div> <!-- /.col-md-4 -->
-
-          <div class="col-md-4 col-services">
-            
-            <!-- Icons -->
-            <figure>
-              <img class="img-services img-margin" src="images/voice_icon.png" alt="">
-            </figure>
-
-            <!-- Title -->
-            <h3 style="color:white;">Voice and Stickers</h3>
-
-            <!-- Description -->
-		<p>Voice messaging, photo sharing, stickers and more!</p>
-
-          </div> <!-- /.col-md-4 -->
-
-          <div class="col-md-4 col-services">
-            
-
-            <!-- Icons -->
-            <figure>
-              <img class="img-services img-margin" src="images/simple_icon.png" alt="">
-            </figure>
-
-            <!-- Title -->
-            <h3 style="color:white;">Simple and Local</h3>
-
-            <!-- Description -->
-	    <p>A modern experience available in your language</p>
-          </div> <!-- /.col-md-4 -->
-          
-        </div> <!-- /.row -->
-        
-      </div> <!-- /.container -->
       
     </section> <!-- /.services-section -->
 
@@ -158,137 +87,19 @@
     <!-- Features -->
     <section class="features-section" id="section-2">
 
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-md-5 col-features text-center">
-            
-            <!-- Images showcase -->
-            <figure>
-              <img class="img-iPhone" src="images/screens/android/create.png" alt="">
-            </figure>
-
-          </div> <!-- /.col-md-5 -->
-
-          <div class="col-md-7 col-features features-content">
-            
-            <!-- Title -->
-            <h3 id="title-1">Easy Setup</h3>
-
-            <!-- Description -->
-	    <p>Zom gets you connected with your friends safely and securely, in no time!</p>
-
-
-          </div> <!-- /.col-md-7 -->
-          
-        </div> <!-- /.row -->
-
-
-
-
-        <div class="row media-screen-800">
-
-          <div class="col-md-7 col-features features-content">
-            
-            <!-- Title -->
-            <h3 id="title-2">Rich Communication</h3>
-
-            <!-- Description -->
-	<p>Send voice messages, share photos and stickers, or just chat quickly and privately with text in your language!</p>
-
-
-<!--
-            <p>
-              <a class="btn btn-danger" href="./sign-in.html">Sign In</a> &nbsp;
-              <a class="btn btn-danger-border" href="./sign-up.html">Sign Up</a>
-            </p>
--->
-
-          </div> <!-- /.col-md-7 -->
-
-          <div class="col-md-5 col-features text-center">
-            
-            <!-- Images showcase -->
-            <figure>
-              <img class="img-iPhone margin-top margin-screen-800" src="images/screens/android/chat.png" alt="">
-            </figure>
-
-          </div> <!-- /.col-md-5 -->
-          
-        </div> <!-- /.row -->
-
-
-
-
-        <div class="row">
-
-          <div class="col-md-5 col-features text-center">
-            
-            <!-- Images showcase -->
-            <figure>
-              <img class="img-iPhone margin-top margin-top-1" src="images/screens/android/group.png" alt="">
-            </figure>
-
-          </div> <!-- /.col-md-5 -->
-
-          <div class="col-md-7 col-features features-content">
-            
-            <!-- Title -->
-            <h3 id="title-3">Group Chat</h3>
-
-            <!-- Description -->
-	    <p>Create chats and invite your friends!</p>
-
-
-          </div> <!-- /.col-md-7 -->
-          
-        </div> <!-- /.row -->
-
-      </div> <!-- /.container -->
 
     </section> <!-- /.features-section -->
 
+<!--
+Sample link
+https://zom.im/i/#a2F0ZWlzem9taW5naW9zM0BkdWtnby5jb20_b3RyPTdENDgwNTc4RTNEMEEyNjZDNzlFMEM5RTZCQTQ0RUFEQjA2MTkwMkQ=
+-->
 
+<div id="qrcode"></div>
+<script type="text/javascript">
+//new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+</script>
 
-
-    <!-- Subscribe -->
-    <section class="subscribe-section" id="section-3" style="background:#999999">
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-md-12">
-
-            <!-- Title -->
-            <h2>Want to get access to our iPhone beta release?</h2>
-
-            <!-- Subscribe form -->
-            <div class="row">
-
-              <div class="col-md-6 col-md-offset-3 col-subscribe">
-
-		<div class='prefinery-form-embed'></div>
-
-
-                <section class="subscribe-description">
-
-                  <p>Don't worry. We do not spam :)</p>
-                  
-                </section> <!-- /.subscribe-description -->
-                
-              </div> <!-- /.col-md-6 -->
-
-            </div> <!-- /.row -->
-            
-          </div> <!-- /.col-md-12 -->
-          
-        </div> <!-- /.row -->
-
-      </div> <!-- /.container -->
-
-    </section> <!-- /.subscribe-section -->
 
 
 
