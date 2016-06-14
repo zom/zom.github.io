@@ -28,7 +28,7 @@
 <div class="back-top">
   <div class="row"> 
   
-  <div class="small-12 medium-6 large-5 columns is-animating" > 
+  <div class="small-12 medium-6 large-5 columns" > 
     <p class="invited">Come Zom with
 <span id="invite-info"></span>
 <p class="white2">
@@ -83,34 +83,6 @@ If or when you do have Zom, tap on or scan the QR code below to add your friend.
   <script src="js/vendor/what-input.js"></script>
   <script src="js/vendor/foundation.js"></script>
   <script src="js/jquery.viewportchecker.js"></script>
-  <script> 
-  $(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
-  </script>
-  <script> 
-  jQuery(document).ready(function() {
-    jQuery('.vis').addClass("hidden").viewportChecker({
-        classToAdd: 'visible animated bounceInUp',
-        offset: 100
-       });
-	   jQuery('.vis2').addClass("hidden").viewportChecker({
-        classToAdd: 'visible animated zoomIn',
-        offset: 100
-       });
-});
-</script>
    <script src="js/app.js"></script>
    <script src="javascript/qrcode/qrcode.js"></script>
 <script type="text/javascript">
