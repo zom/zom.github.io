@@ -20,10 +20,8 @@
 </div>
 
 
-
 <div class="top-bar"  id="zomtop" >
 <div class="top-bar-left logo">
-  <img src="images/zom1.png" width="100" height="auto" alt="zom logo"></div>
   
  </div> 
 
@@ -33,18 +31,16 @@
   <div class="row"> 
   
   <div class="small-12 medium-6 large-5 columns is-animating" > 
-    <p class="invited animated bounceIn" >You have been
-invited to Zom!
+    <p class="invited animated bounceIn">Come Zom with
+<span id="invite-info"></span>
 <p class="white2 animated fadeInDown">
-
-1) Download the app below.
+If you don't have the app, then...
 </p>
+<p class="download animated bounceInUp"><a href="download/index.html">Download</a></p>
 <p class="white2 animated fadeInDown">
-
-2) Once you have setup Zom,
-tap on the invite link again
-to add your friend.
+If or when you do have Zom, tap on or scan the QR code below to add your friend.
 </p>
+<div id="qrcode"></div>
 
 
 </p>
@@ -52,7 +48,6 @@ to add your friend.
     
     <!--<p class="download animated bounceInUp"><a href="#download">Download</a></p>-->
     
-    <p class="download animated bounceInUp"><a href="download/index.html">Download</a></p>
   
 
     </div>
@@ -62,13 +57,6 @@ to add your friend.
   </div>
 </div>
 
-<div class="b4">
-<a name="download"></a>
-<div class="row vis2">
-<h2 class="fet1"><a href="index.html"><span>Learn More &amp; Download</span></a></h2>
-
-</div>
-</div>
 
 
 
@@ -79,18 +67,12 @@ to add your friend.
 
 
 <div class="b3">
-<a name="support"></a>
-<div class="row">
-
-</div>
-
 
 
 <div class="cont-cel">
 <div class="bottomchar"><img src="images/bot-support.png" width="241" height="232"></div>
 <div class="row centered">
-
-<p>&nbsp;</p>
+<p>Learn more about Zom at <a href="https://zom.im">https://zom.im</a></p>
 <p>Copyright © 2016 <span class="contfeat">Zom</span>. All screenshots © their respective owners. <br>
   Privacy Policy</p>
 </div>
@@ -132,5 +114,35 @@ to add your friend.
 });
 </script>
    <script src="js/app.js"></script>
+   <script src="javascript/qrcode/qrcode.js"></script>
+<script type="text/javascript">
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+	text: document.location.href,
+	width: 196,
+	height: 196,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
+</script>
+<script>
+var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=Base64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/rn/g,"n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}}
+
+
+var inviteLink = document.location.href;
+
+inviteLink = Base64.decode(inviteLink.substring(inviteLink.indexOf("#")+1));
+var inviteUser = inviteLink.substring(0,inviteLink.indexOf("?"));
+var inviteKey = inviteLink.substring(inviteLink.indexOf("otr=")+4).substring(0,40);
+var xmppLink = "xmpp:" + inviteUser + "?subscribe&otr-fingerprint=" + inviteKey;
+document.getElementById("invite-info").innerHTML="<h3><a style=\"color:white\" href=\"" + xmppLink + "\">" + inviteUser + "</a></h3>";
+
+document.getElementById("qrcode").onclick = function() { 
+		document.location.href=xmppLink;
+        };
+</script>
+
+
+
 </body>
 </html>
