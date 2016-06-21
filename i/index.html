@@ -9,6 +9,13 @@
     <title>Zom Mobile Messenger</title>
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/app.css">
+<style>
+#buttonaddfriend
+{
+margin:6px;
+margin-left:48px;
+}
+</style>
   <link href="css/zmcs.css" rel="stylesheet" type="text/css">
   </head>
   <body>
@@ -26,6 +33,7 @@
 If or when you do have Zom, tap on or scan the QR code below to add your friend.
 </p>
 <div id="qrcode"></div>
+<input type="button" id="buttonaddfriend" value="Add Friend"/>
 </div>    
 
 <div class="small-12 medium-6 large-7 columns"> 
@@ -84,6 +92,10 @@ var xmppLink = "xmpp:" + inviteUser + "?subscribe&otr-fingerprint=" + inviteKey;
 document.getElementById("contactinfo").innerHTML="<a style=\"color:white\" href=\"" + xmppLink + "\">" + inviteUser + "</a>";
 
 document.getElementById("qrcode").onclick = function() { 
+		document.location.href=xmppLink;
+
+        };
+document.getElementById("buttonaddfriend").onclick = function() { 
 		document.location.href=xmppLink;
 
         };
