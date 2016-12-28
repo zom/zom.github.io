@@ -13,7 +13,7 @@ background-color:#fff;
 color:#e7275a;
 }
 .top-bar .logo {
- margin-left:40px;
+ margin-left:10px;
  margin-bottom:10px;
 }
 .menu li.feature a {
@@ -35,7 +35,7 @@ color:#9e133e;
 	font-weight: bold;
 }
 .row {
-padding: 10px 40px 10px 40px;
+padding: 10px 10px 10px 10px;
 }
 .back-top {
 background: #e2255b; /* Old browsers */
