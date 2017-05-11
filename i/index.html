@@ -91,7 +91,7 @@ var inviteLink = document.location.href;
 inviteLink = Base64.decode(inviteLink.substring(inviteLink.indexOf("#")+1));
 
 var xmppLink = "";
-var inviteUser = "":
+var inviteUser = "";
 
 if (inviteLink.indexOf("?")!=-1)
 {
@@ -106,7 +106,6 @@ else
 }
 
 	document.getElementById("contactinfo").innerHTML="<a style=\"color:white\" href=\"" + xmppLink + "\">" + inviteUser + "</a>";
-
 
 
 document.getElementById("qrcode").onclick = function() { 
