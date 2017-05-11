@@ -90,6 +90,9 @@ var inviteLink = document.location.href;
 
 inviteLink = Base64.decode(inviteLink.substring(inviteLink.indexOf("#")+1));
 
+//handle safe encoding; for some reason our library doesn't
+inviteLink = inviteLink.replace("_","\\");
+
 var xmppLink = "";
 var inviteUser = "";
 var inviteKey = "";
