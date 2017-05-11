@@ -25,7 +25,9 @@ margin-left:48px;
 <div class="back-top">
 <div class="row">
   <div class="small-12 medium-6 large-5 columns" > 
-    <p class="invited">Come Zom with me! <span id="contactinfo"></span></p>
+    <p class="invited">Come Zom with me!</p>
+<p class="white2"><span id="contactinfo"></span> has invited you to Zom.</p>
+<input type="button" id="buttonaddfriend" value="Add Friend"/>
 <p class="white2">If you don't have the app, first download &amp; install:</p>
 <div>
 <a href="https://itunes.apple.com/us/app/zom-mobile-messenger/id1059530167?mt=8" target="_blank"><img src="images/macdown.png"  alt="download zom" style="width:125px"></a>
@@ -36,7 +38,6 @@ margin-left:48px;
 If or when you do have Zom, tap on or scan the QR code below to add your friend.
 </p>
 <div id="qrcode"></div>
-<input type="button" id="buttonaddfriend" value="Add Friend"/>
 </div>    
 
 <div class="small-12 medium-6 large-7 columns"> 
@@ -88,11 +89,25 @@ var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456
 var inviteLink = document.location.href;
 
 inviteLink = Base64.decode(inviteLink.substring(inviteLink.indexOf("#")+1));
-var inviteUser = inviteLink.substring(0,inviteLink.indexOf("?"));
-var inviteKey = inviteLink.substring(inviteLink.indexOf("otr=")+4).substring(0,40);
-var xmppLink = "xmpp:" + inviteUser + "?subscribe&otr-fingerprint=" + inviteKey;
 
-document.getElementById("contactinfo").innerHTML="<a style=\"color:white\" href=\"" + xmppLink + "\">" + inviteUser + "</a>";
+var xmppLink = "";
+var nickname = "":
+
+if (inviteLink.indexOf("?")!=-1)
+{
+	var inviteKey = inviteLink.substring(inviteLink.indexOf("otr=")+4).substring(0,40);
+	inviteUser = inviteLink.substring(0,inviteLink.indexOf("?"));
+	xmppLink = "xmpp:" + inviteUser + "?subscribe&otr-fingerprint=" + inviteKey;
+}
+else
+{
+	xmppLink = "xmpp:" + inviteLink + "?subscribe";
+	inviteUser = inviteLink;
+}
+
+	document.getElementById("contactinfo").innerHTML="<a style=\"color:white\" href=\"" + xmppLink + "\">" + inviteUser + "</a>";
+
+
 
 document.getElementById("qrcode").onclick = function() { 
 		document.location.href=xmppLink;
