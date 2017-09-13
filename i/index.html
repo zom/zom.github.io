@@ -36,6 +36,7 @@ padding:12px;
     <p class="invited">Come Zom with me!</p>
 <p class="white2"><span id="contactinfo"></span> has invited you to Zom.</p>
 <input type="button" id="buttonaddfriend" value="Add Friend"/>
+<div id="invitelink"></div>
 <p class="white2">If you don't have the app, first download &amp; install:</p>
 <div>
 <a href="https://itunes.apple.com/us/app/zom-mobile-messenger/id1059530167?mt=8" target="_blank"><img src="images/macdown.png"  alt="download zom" style="width:125px"></a>
@@ -83,16 +84,6 @@ If or when you do have Zom, tap on or scan the QR code below to add your friend.
 <script src="js/base64.js"></script>
    <script src="javascript/qrcode/qrcode.js"></script>
 <script type="text/javascript">
-var qrcode = new QRCode(document.getElementById("qrcode"), {
-	text: document.location.href,
-	width: 196,
-	height: 196,
-    colorDark : "#000000",
-    colorLight : "#ffffff",
-    correctLevel : QRCode.CorrectLevel.H
-});
-</script>
-<script>
 
 var inviteLink = document.location.href;
 
@@ -112,26 +103,37 @@ if (inviteLink.indexOf("?")!=-1)
 //        if (inviteLink.indexOf("otr=")!=-1)
 //		inviteKey = inviteLink.substring(inviteLink.indexOf("otr=")+4).substring(0,40);
 
-	xmppLink = "xmpp:" + inviteUser + "?subscribe";
+	xmppLink = "xmpp:" + inviteUser + "?subscribe&otr-fingerprint=";
 //&otr-fingerprint=" + inviteKey;
 }
 else
 {
-	xmppLink = "xmpp:" + inviteLink + "?subscribe";
+	xmppLink = "xmpp:" + inviteLink + "?subscribe&otr-fingerprint=";
 	inviteUser = inviteLink;
 }
 
 	document.getElementById("contactinfo").innerHTML="<a style=\"color:white\" href=\"" + xmppLink + "\">" + inviteUser + "</a>";
+	document.getElementById("invitelink").innerHTML=xmppLink;
 
 
 document.getElementById("qrcode").onclick = function() { 
 		document.location.href=xmppLink;
 
         };
+
 document.getElementById("buttonaddfriend").onclick = function() { 
 		document.location.href=xmppLink;
 
         };
+
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+	text: xmppLink,
+	width: 196,
+	height: 196,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
 </script>
 
 
