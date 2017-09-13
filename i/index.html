@@ -109,10 +109,11 @@ if (inviteLink.indexOf("?")!=-1)
 {
 	inviteUser = inviteLink.substring(0,inviteLink.indexOf("?"));
         
-        if (inviteLink.indexOf("otr=")!=-1)
-		inviteKey = inviteLink.substring(inviteLink.indexOf("otr=")+4).substring(0,40);
+//        if (inviteLink.indexOf("otr=")!=-1)
+//		inviteKey = inviteLink.substring(inviteLink.indexOf("otr=")+4).substring(0,40);
 
-	xmppLink = "xmpp:" + inviteUser + "?subscribe&otr-fingerprint=" + inviteKey;
+	xmppLink = "xmpp:" + inviteUser + "?subscribe";
+//&otr-fingerprint=" + inviteKey;
 }
 else
 {
