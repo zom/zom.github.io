@@ -477,6 +477,16 @@ To start a 'Group' in an iOS device, go to the 'Compose' page and click on the c
   </script>
   <script> 
   jQuery(document).ready(function() {
+
+var language = navigator.languages && navigator.languages[0] ||
+               navigator.language ||
+               navigator.userLanguage;
+
+if (langeuage.includes("bo"))
+	window.location.href = "zomtibetan.html";
+else if (language.includes("zh"))
+	window.location.href = "zomchinese.html";
+
 /**
     jQuery('.vis').addClass("hidden").viewportChecker({
         classToAdd: 'visible animated bounceInUp',
