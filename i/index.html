@@ -30,10 +30,14 @@ padding:12px;
     <script src="javascript/wechat.js"></script>
   </head>
   <body>
+
 <div class="back-top">
 <div class="row">
   <div class="small-12 medium-6 large-5 columns" > 
     <p class="invited">Come Zom with me!</p>
+<p class="white2">
+      <a href="i/index_tibetan.html" id="linktibetan" class="white2">བོད་ཡིག</a> | <a href="i/index_chinese.html" id="linkchinese" class="white2">中文</a>
+</p>
 <p class="white2"><span id="contactinfo"></span> has invited you to Zom.</p>
 <input type="button" id="buttonaddfriend" value="Add Friend"/>
 <div id="invitelink"></div>
@@ -86,8 +90,12 @@ If or when you do have Zom, tap on or scan the QR code below to add your friend.
 <script type="text/javascript">
 
 var inviteLink = document.location.href;
+inviteLink = inviteLink.substring(inviteLink.indexOf("#")+1);
 
-inviteLink = Base64.decode(inviteLink.substring(inviteLink.indexOf("#")+1));
+document.getElementById("linktibetan").href = "i/index_tibetan.html#" + inviteLink;
+document.getElementById("linkchinese").href = "i/index_chinese.html#" + inviteLink;
+
+inviteLink = Base64.decode(inviteLink);
 
 //handle safe encoding; for some reason our library doesn't
 inviteLink = inviteLink.replace("_","\\");
