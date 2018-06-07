@@ -89,11 +89,21 @@ If or when you do have Zom, tap on or scan the QR code below to add your friend.
    <script src="javascript/qrcode/qrcode.js"></script>
 <script type="text/javascript">
 
+var language = navigator.languages && navigator.languages[0] ||
+               navigator.language ||
+               navigator.userLanguage;
+
+
 var inviteLink = document.location.href;
 inviteLink = inviteLink.substring(inviteLink.indexOf("#")+1);
 
 document.getElementById("linktibetan").href = "i/index_tibetan.html#" + inviteLink;
 document.getElementById("linkchinese").href = "i/index_chinese.html#" + inviteLink;
+
+if (language.includes("bo"))
+        window.location.href = "i/index_tibetan.html#" + inviteLink;
+else if (language.includes("zh"))
+        window.location.href = "i/index_chinese.html#" + inviteLink;
 
 inviteLink = Base64.decode(inviteLink);
 
