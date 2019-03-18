@@ -93,7 +93,6 @@ var language = navigator.languages && navigator.languages[0] ||
                navigator.language ||
                navigator.userLanguage;
 
-
 var inviteLink = document.location.href;
 inviteLink = inviteLink.substring(inviteLink.indexOf("#")+1);
 
@@ -105,14 +104,23 @@ if (language.includes("bo"))
 else if (language.includes("zh"))
         window.location.href = "i/index_chinese.html#" + inviteLink;
 
+var xmppLink = "";
+var inviteUser = "";
+var inviteKey = "";
+
+if (inviteLink.startsWith("@"))
+{
+	inviteUser = inviteLink.substring(1).split(":")[0];
+	xmppLink = "zom://?id=" + inviteLink;
+
+}
+else
+{
 inviteLink = Base64.decode(inviteLink);
 
 //handle safe encoding; for some reason our library doesn't
 inviteLink = inviteLink.replace("_","\\");
 
-var xmppLink = "";
-var inviteUser = "";
-var inviteKey = "";
 
 if (inviteLink.indexOf("?")!=-1)
 {
@@ -121,13 +129,14 @@ if (inviteLink.indexOf("?")!=-1)
 //        if (inviteLink.indexOf("otr=")!=-1)
 //		inviteKey = inviteLink.substring(inviteLink.indexOf("otr=")+4).substring(0,40);
 
-	xmppLink = "xmpp:" + inviteUser + "?subscribe&otr-fingerprint=";
+	nxmppLink = "xmpp:" + inviteUser + "?subscribe&otr-fingerprint=";
 //&otr-fingerprint=" + inviteKey;
 }
 else
 {
 	xmppLink = "xmpp:" + inviteLink + "?subscribe&otr-fingerprint=";
 	inviteUser = inviteLink;
+}
 }
 
 	document.getElementById("contactinfo").innerHTML="<a style=\"color:white\" href=\"" + xmppLink + "\">" + inviteUser + "</a>";
