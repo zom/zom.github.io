@@ -89,7 +89,7 @@ padding:12px;
 
 var inviteLink = document.location.href;
 
-inviteLink = Base64.decode(inviteLink.substring(inviteLink.indexOf("#")+1));
+inviteLink = inviteLink.substring(inviteLink.indexOf("#")+1);
 
 //handle safe encoding; for some reason our library doesn't
 inviteLink = inviteLink.replace("_","\\");
@@ -97,6 +97,20 @@ inviteLink = inviteLink.replace("_","\\");
 var xmppLink = "";
 var inviteUser = "";
 var inviteKey = "";
+
+
+if (inviteLink.startsWith("@"))
+{
+        inviteUser = inviteLink.substring(1).split(":")[0];
+        xmppLink = "matrix://?id=" + inviteLink;
+
+}
+else
+{
+inviteLink = Base64.decode(inviteLink);
+
+//handle safe encoding; for some reason our library doesn't
+inviteLink = inviteLink.replace("_","\\");
 
 if (inviteLink.indexOf("?")!=-1)
 {
@@ -112,6 +126,7 @@ else
 {
 	xmppLink = "xmpp:" + inviteLink + "?subscribe&otr-fingerprint=";
 	inviteUser = inviteLink;
+}
 }
 
 	document.getElementById("contactinfo").innerHTML="<a style=\"color:white\" href=\"" + xmppLink + "\">" + inviteUser + "</a>";
