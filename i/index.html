@@ -114,13 +114,14 @@ if (inviteLink.startsWith("@"))
 {
 	inviteUser = inviteLink.substring(1).split(":")[0];
 	xmppLink = "zom://invite?id=" + inviteLink;
-
+	document.getElementById("contactinfo").innerHTML="<a style=\"color:white\" href=\"" + xmppLink + "\">" + inviteUser + "</a>";
 }
 else if (inviteLink.startsWith("#")||inviteLink.startsWith("!"))
 {
 	inviteUser = inviteLink.substring(1).split(":")[0];
 	xmppLink = "zom://invite?id=" + inviteLink;
 	document.getElementById("buttonaddfriend").value = "Join Group";
+	document.getElementById("contactinfo").innerHTML="<a style=\"color:white\" href=\"" + xmppLink + "\">A group</a>";
 }
 else
 {
@@ -147,7 +148,6 @@ else
 }
 }
 
-	document.getElementById("contactinfo").innerHTML="<a style=\"color:white\" href=\"" + xmppLink + "\">" + inviteUser + "</a>";
 //	document.getElementById("invitelink").innerHTML=xmppLink;
 
 
