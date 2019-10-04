@@ -87,7 +87,7 @@ padding:12px;
 
 var inviteLink = document.location.href;
 
-inviteLink = inviteLink.substring(inviteLink.indexOf("#")+1);
+inviteLink = decodeURIComponent(inviteLink.substring(inviteLink.indexOf("#")+1));
 
 //handle safe encoding; for some reason our library doesn't
 inviteLink = inviteLink.replace("_","\\");
@@ -102,6 +102,12 @@ if (inviteLink.startsWith("@"))
         inviteUser = inviteLink.substring(1).split(":")[0];
         xmppLink = "zom://?id=" + inviteLink;
 
+}
+else if (inviteLink.startsWith("#")||inviteLink.startsWith("!"))
+{
+        inviteUser = inviteLink.substring(1).split(":")[0];
+        xmppLink = "zom://invite?id=" + inviteLink;
+        document.getElementById("buttonaddfriend").value = "Join Group";
 }
 else
 {

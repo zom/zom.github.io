@@ -96,10 +96,10 @@ var language = navigator.languages && navigator.languages[0] ||
                navigator.userLanguage;
 
 var inviteLink = document.location.href;
-inviteLink = inviteLink.substring(inviteLink.indexOf("#")+1);
+inviteLink = decodeURIComponent(inviteLink.substring(inviteLink.indexOf("#")+1));
 
-document.getElementById("linktibetan").href = "i/index_tibetan.html#" + inviteLink;
-document.getElementById("linkchinese").href = "i/index_chinese.html#" + inviteLink;
+document.getElementById("linktibetan").href = "i/index_tibetan.html#" + encodeURIComponent(inviteLink);
+document.getElementById("linkchinese").href = "i/index_chinese.html#" + encodeURIComponent(inviteLink);
 
 if (language.includes("bo"))
         window.location.href = "i/index_tibetan.html#" + inviteLink;
@@ -120,6 +120,7 @@ else if (inviteLink.startsWith("#")||inviteLink.startsWith("!"))
 {
 	inviteUser = inviteLink.substring(1).split(":")[0];
 	xmppLink = "zom://invite?id=" + inviteLink;
+	document.getElementById("buttonaddfriend").value = "Join Group";
 }
 else
 {
