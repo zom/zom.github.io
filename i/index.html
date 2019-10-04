@@ -116,6 +116,11 @@ if (inviteLink.startsWith("@"))
 	xmppLink = "zom://invite?id=" + inviteLink;
 
 }
+else if (inviteLink.startsWith("#")||inviteLink.startsWith("!"))
+{
+	inviteUser = inviteLink.substring(1).split(":")[0];
+	xmppLink = "zom://invite?id=" + inviteLink;
+}
 else
 {
 inviteLink = Base64.decode(inviteLink);
