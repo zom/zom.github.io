@@ -28,7 +28,7 @@ if (inviteLink.startsWith("@"))
 else if (inviteLink.startsWith("#")||inviteLink.startsWith("!"))
 {
 	inviteUser = inviteLink.substring(1).split(":")[0];
-	xmppLink = "zom://invite?id=" + encodeURIComponent(inviteLink);
+	xmppLink = "zom://join?id=" + encodeURIComponent(inviteLink);
 	document.getElementById("buttonaddfriend").value = "Join Group";
 	document.getElementById("contactinfo").innerHTML="<a style=\"color:white\" href=\"" + xmppLink + "\">A group</a>";
 }
