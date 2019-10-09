@@ -57,7 +57,6 @@ else
 }
 }
 
-//	document.getElementById("invitelink").innerHTML=xmppLink;
 
 
 document.getElementById("qrcode").onclick = function() { 
