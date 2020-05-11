@@ -21,6 +21,14 @@ color:#e7275a;
 border:solid 2px #e7275a;
 border-radius: 5px;
 }
+
+.menu li.login a {
+	background-color: #e7275a;
+	color:#fff;
+	/* border:solid 2px #e7275a; */
+	border-radius: 5px;
+	}
+	
 .menu li a {
 color:#999;
 font-weight:bold;
