@@ -16,6 +16,7 @@ else if (language.includes("zh"))
         window.location.href = "i/index_chinese.html#" + inviteLink;
 
 var xmppLink = "";
+var webLink = "https://web.nang.zom.im/#/room/";
 var inviteUser = "";
 var inviteKey = "";
 
@@ -23,13 +24,15 @@ if (inviteLink.startsWith("@"))
 {
 	inviteUser = inviteLink.substring(1).split(":")[0];
 	xmppLink = "zom://invite?id=" + encodeURIComponent(inviteLink);
+	webLink += inviteLink;
 	document.getElementById("contactinfo").innerHTML="<a style=\"color:white\" href=\"" + xmppLink + "\">" + inviteUser + "</a>";
 }
 else if (inviteLink.startsWith("#")||inviteLink.startsWith("!"))
 {
 	inviteUser = inviteLink.substring(1).split(":")[0];
 	xmppLink = "zom://join?id=" + encodeURIComponent(inviteLink);
-	document.getElementById("buttonaddfriend").value = "Join Group";
+	webLink += inviteLink;
+	//document.getElementById("buttonaddfriend").value = "Join Group";
 	document.getElementById("contactinfo").innerHTML="<a style=\"color:white\" href=\"" + xmppLink + "\">A group</a>";
 }
 else
@@ -47,12 +50,15 @@ if (inviteLink.indexOf("?")!=-1)
 //        if (inviteLink.indexOf("otr=")!=-1)
 //		inviteKey = inviteLink.substring(inviteLink.indexOf("otr=")+4).substring(0,40);
 
-	nxmppLink = "xmpp:" + inviteUser + "?subscribe&otr-fingerprint=";
+	xmppLink = "zom://invite?id=" + inviteUser;
+	webLink += inviteLink;
 //&otr-fingerprint=" + inviteKey;
 }
 else
 {
-	xmppLink = "xmpp:" + inviteLink + "?subscribe&otr-fingerprint=";
+	xmppLink = "zom://invite?id=" + inviteLink;
+	webLink += inviteLink;
+	
 	inviteUser = inviteLink;
 }
 }
@@ -66,7 +72,10 @@ document.getElementById("qrcode").onclick = function() {
 
 document.getElementById("buttonaddfriend").onclick = function() { 
 		document.location.href=xmppLink;
+        };
 
+document.getElementById("buttonjoingroup").onclick = function() { 
+		document.location.href=webLink;
         };
 
 var qrcode = new QRCode(document.getElementById("qrcode"), {
