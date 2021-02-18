@@ -77,6 +77,9 @@ document.getElementById("buttonaddfriend").onclick = function() {
 document.getElementById("buttonjoingroup").onclick = function() { 
 		document.location.href=webLink;
         };
+document.getElementById("buttonjoinguest").onclick = function() { 
+		document.location.href="/app/#/room/" + inviteUser;
+        };
 
 var qrcode = new QRCode(document.getElementById("qrcode"), {
 	text: xmppLink,
