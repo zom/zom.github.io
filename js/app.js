@@ -78,7 +78,7 @@ document.getElementById("buttonjoingroup").onclick = function() {
 		document.location.href=webLink;
         };
 document.getElementById("buttonjoinguest").onclick = function() { 
-		document.location.href="/app/#/room/" + inviteUser;
+		document.location.href="/app/#/room/" + inviteLink;
         };
 
 var qrcode = new QRCode(document.getElementById("qrcode"), {
