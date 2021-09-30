@@ -1,0 +1,191 @@
+{
+  "baseUrl": "",
+  "packs": [
+    {
+      "name": "buddhist",
+      "stickers": [
+        "butter_lamp.png",
+        "mandala.png",
+        "meditation_cushion.png",
+        "prayer_flags.png",
+        "prayer_wheel.png",
+        "singing_bowl.png",
+        "stupa.png",
+        "thangka.png",
+        "the_three_jewels.png",
+        "trenga.png"
+      ]
+    },
+    {
+      "name": "expressions",
+      "stickers": [
+        "goodnight.png",
+        "happy_birthday.png",
+        "i_miss_you.png",
+        "lared-boy-final.png",
+        "lared-girl-final.png",
+        "monk-ghare-final.png",
+        "tashi_delek.png",
+        "yak-boy-final.png",
+        "yamtsen-dog-final.png",
+        "zom_ex1_01.png",
+        "zom_ex1_02.png",
+        "zom_ex1_03.png",
+        "zom_ex1_04.png",
+        "zom_ex1_05.png",
+        "zom_ex1_06.png",
+        "zom_ex1_07.png",
+        "zom_ex1_08.png",
+        "zom_ex1_09.png",
+        "zom_ex1_10.png"
+      ]
+    },
+    {
+      "name": "losar",
+      "stickers": [
+        "dreka-b.png",
+        "dresil-losar-b.png",
+        "dresil-losar-recipe.png",
+        "guthuk-b.png",
+        "guthuk.png",
+        "home-offering.png",
+        "khabsay-dog.png",
+        "khabsay.png",
+        "khabsey.png",
+        "lha_gyalo.png",
+        "losar-greeting-yak.png",
+        "losar-ox-couple.png",
+        "losar-ox-dance.png",
+        "losar-ox-female.png",
+        "losar-ox-male.png",
+        "losar-ox-year.png",
+        "losar-wood-ox-float.png",
+        "losar-yak-greeting.png",
+        "losar_tashi_delek.png",
+        "shaptak.png"
+      ]
+    },
+    {
+      "name": "olo and shimi",
+      "stickers": [
+        "10shhh.png",
+        "11flowers.png",
+        "12music.png",
+        "13relax.png",
+        "14eating.png",
+        "15biscuit.png",
+        "1thinking.png",
+        "2bored.png",
+        "3scared.png",
+        "4greeting.png",
+        "5hearts.png",
+        "6yay.png",
+        "7upset.png",
+        "8crying.png",
+        "9dancing.png"
+      ]
+    },
+    {
+      "name": "pema",
+      "stickers": [
+        "goodmorning.png",
+        "om-mani.png",
+        "pema01.png",
+        "pema02.png",
+        "pema03.png",
+        "pema04.png",
+        "pema05.png",
+        "pema06.png",
+        "pema07.png",
+        "pema08.png",
+        "pema09.png",
+        "pema10.png"
+      ]
+    },
+    {
+      "name": "sindu",
+      "stickers": [
+        "Hello.png",
+        "Howl.png",
+        "Lets Play.png",
+        "Puppy Love.png",
+        "Sleeping.png",
+        "Woof.png",
+        "play-mud.png",
+        "play.png",
+        "scarf.png",
+        "tashi-delek.png"
+      ]
+    },
+    {
+      "name": "tiboji",
+      "stickers": [
+        "ButterTea.png",
+        "Om.png",
+        "PrayerHands.png",
+        "Prostration.png",
+        "TibetanPrayerWheel.png",
+        "Yak.png",
+        "agu_denpa_avatar.png",
+        "butter-lamp.png",
+        "khata.png",
+        "monkdebate.png",
+        "shabhaley.png"
+      ]
+    },
+    {
+      "name": "topgyal",
+      "stickers": [
+        "Bemused.png",
+        "Bite.png",
+        "Cold.png",
+        "Flowers.png",
+        "Love.png",
+        "Mad.png",
+        "Music.png",
+        "Sad.png",
+        "Singing.png",
+        "Thinking.png"
+      ]
+    },
+    {
+      "name": "training",
+      "stickers": [
+        "confused-2.png",
+        "confused.png",
+        "disagree.png",
+        "i-agree.png",
+        "i-am-here.png",
+        "i-cannot-hear.png",
+        "i-understand.png",
+        "intense-discussion.png",
+        "interesting.png",
+        "raise-hand.png",
+        "thank-you.png",
+        "well-done.png"
+      ]
+    },
+    {
+      "name": "zomkyi",
+      "stickers": [
+        "10_zomkyi_jumpinghappy.png",
+        "11_zomkyi_goodjob.png",
+        "12_zomkyi_petsdog.png",
+        "14_zomkyi_sickandsad.png",
+        "15_zomkyi_dog.png",
+        "16_zomkyi_sick.png",
+        "17_zomkyi_thinking.png",
+        "18_zomkyi_cryingagain.png",
+        "19_zomkyi_clapping.png",
+        "1_zomkyi_dancing.png",
+        "20_zomkyi_heat.png",
+        "2_zomkyi_hooray.png",
+        "4_zomkyi_praying.png",
+        "5_zomkyi_heart.png",
+        "6_zomkyi_tongue.png",
+        "7_zomkyi_yo.png",
+        "8_zomkyi_notondiet.png"
+      ]
+    }
+  ]
+}

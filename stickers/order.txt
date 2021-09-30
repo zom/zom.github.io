@@ -1,0 +1,11 @@
+# List your sticker pack names here, one per line
+buddhist
+expressions
+losar
+olo and shimi
+pema
+sindu
+tiboji
+topgyal
+training
+zomkyi
